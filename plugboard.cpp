@@ -7,13 +7,13 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <cstdlib> // for exit function
+#include <cstdlib> // For exit function
 
 using namespace std;
 
 Plugboard::Plugboard(char* filename)
 {
-// Read in file 'filename' and add each pair to map
+	// Read in file 'filename' and add each pair to map
 
 	ifstream indata;
 	int x, y;
@@ -28,6 +28,7 @@ Plugboard::Plugboard(char* filename)
 
 	indata >> x;
 	indata >> y;
+
 	 // Keep reading until end-of-file
 	while ( !indata.eof() )
 	{

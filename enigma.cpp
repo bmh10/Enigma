@@ -77,7 +77,6 @@ int main(int numArgs, char** args )
 
 	// Read in char by char from standard input until EOF reached
 	char curr;
-	//cin >> ws;
 
 	while (cin)
 	{
@@ -89,14 +88,7 @@ int main(int numArgs, char** args )
 		else if (isspace(curr))
 			cout << curr;
 		else
-		{
 			continue;
-			//cerr << endl << "Error - the input character '" << curr << "' is not an upper case letter." << endl;
-			//return 1;
-		}
-
-		// Remove any white space up to the next non-whitespace character, or EOF
-		//cin >> ws;
 	}
 
 

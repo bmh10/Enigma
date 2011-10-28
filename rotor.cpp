@@ -6,14 +6,14 @@
 #include "rotor.h"
 #include <iostream>
 #include <fstream>
-#include <cstdlib> // for exit function
+#include <cstdlib> // For exit function
 
 using namespace std;
 
 
 Rotor::Rotor(char* filename) : numRotations(0)
 {
-// read in file 'filename' and put into rotorVec deque/vector
+	// Read in file 'filename' and put into rotorVec deque/vector
 
 	ifstream indata;
 	int x;
@@ -28,12 +28,14 @@ Rotor::Rotor(char* filename) : numRotations(0)
 	
 	indata >> x;
 	int i=0;
-	// keep reading until end-of-file
+
+	// Keep reading until end-of-file
 	while ( !indata.eof() ) 
 	{
 		rotorFwd[i] = x-i;
 		rotorRev[x] = i-x;
-		indata >> x; // sets EOF flag if no value found
+		// Sets EOF flag if no value found
+		indata >> x; 
 		++i;
 	}	
 	indata.close();
